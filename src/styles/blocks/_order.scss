@@ -1,0 +1,40 @@
+$order-border: #ebe8e1;
+
+.order {
+	background-image: url("../img/order.jpg");
+	text-align: center;
+	padding-top: 135px;
+	padding-bottom: 135px;
+
+	@include media(w1024) {
+		padding-top: 100px;
+		padding-bottom: 100px;
+	}
+
+	&__block {
+		background-color: white;
+		border: 12px solid $order-border;
+		display: inline-block;
+		padding: 75px 130px;
+
+		@include media(w1024) {
+			padding: 65px 50px;
+		}
+
+		@include media(w768) {
+			padding: 65px 20px;
+		}
+	}
+
+	&__phone {
+		display: inline-block;
+	}
+
+	&__btn {
+		margin-bottom: 20px;
+	}
+
+	&__title {
+		margin-bottom: 50px;
+	}
+}

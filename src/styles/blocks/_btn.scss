@@ -1,0 +1,69 @@
+$btn-round-height-desktop: 60px;
+$btn-round-height-desktop-s: 36px;
+
+.btn-round {
+	background-color: $main-green;
+	border-radius: $btn-round-height-desktop / 2;
+	border: 1px solid $main-green;
+	outline: none;
+	cursor: pointer;
+	color: white;
+	font-size: 20px;
+	text-decoration: none;
+	padding: 0 70px;
+	height: $btn-round-height-desktop;
+
+	&_inverse {
+		background-color: white;
+		color: $main-green;
+	}
+
+	@include media(w1024) {
+		padding: 0 50px;
+	}
+
+	@include media(w768) {
+		padding: 0 30px;
+	}
+
+	&_s {
+		font-size: 16px;
+		padding: 0 30px;
+		height: $btn-round-height-desktop-s;
+
+		@include media(w1024) {
+			padding: 0 20px;
+		}
+
+		@include media(w768) {
+			padding: 0 10px;
+		}
+	}
+}
+
+.btn-rect {
+	background-color: $main-green;
+	border-radius: 2px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	color: white;
+	font-size: 16px;
+	padding: 10px 30px;
+}
+
+button {
+	
+	&.btn-round {
+		display: inline-block;
+	}
+}
+
+a {
+
+	&.btn-round {
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+	}
+}

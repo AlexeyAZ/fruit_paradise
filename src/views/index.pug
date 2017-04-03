@@ -1,0 +1,106 @@
+extends templates/layout
+
+block vars
+    - var title = 'Фруторай - главная'
+
+block content
+    section.sec.index
+        div.container
+            img(src="img/main-heading.png", alt="").index__heading
+            p.text.text_m.tt-uppercase.ta-center.index__title.
+                что мы делаем?
+            div.p-gallery.index__p-gallery
+                ul.p-gallery__list
+                    li.p-gallery__item
+                        a(href="").p-gallery__link
+                            span.p-gallery__img-container
+                                img(src="img/p-gallery-1.jpg", alt="").p-gallery__img
+                            p.p-gallery__text.
+                                Фруктовые букеты
+                    li.p-gallery__item
+                        a(href="").p-gallery__link
+                            span.p-gallery__img-container
+                                img(src="img/p-gallery-2.jpg", alt="").p-gallery__img
+                            p.p-gallery__text.
+                                Фруктовые Корзины
+                    li.p-gallery__item
+                        a(href="").p-gallery__link
+                            span.p-gallery__img-container
+                                img(src="img/p-gallery-3.jpg", alt="").p-gallery__img
+                            p.p-gallery__text.
+                                Оригинальные композиции
+                    li.p-gallery__item
+                        a(href="").p-gallery__link
+                            span.p-gallery__img-container
+                                img(src="img/p-gallery-4.jpg", alt="").p-gallery__img
+                            p.p-gallery__text.
+                                Фрукты в шоколаде
+                    li.p-gallery__item
+                        a(href="").p-gallery__link
+                            span.p-gallery__img-container
+                                img(src="img/p-gallery-5.jpg", alt="").p-gallery__img
+                            p.p-gallery__text.
+                                Карвинг арбуза
+                    li.p-gallery__item
+                        a(href="").p-gallery__link
+                            span.p-gallery__img-container
+                                img(src="img/p-gallery-6.jpg", alt="").p-gallery__img
+                            p.p-gallery__text.
+                                Канапе и нарезки
+        div.inner-sec.bg-gray.index__inner-sec-advantages
+            div.container
+                ul.index__advantages-list
+                    li(style="background-image: url('img/icons/adv-1.png')").index__advantages-item
+                        p.index__advantages-title.
+                            Большой выбор
+                        p.index__advantages-text.
+                            Всегда свежые фрукты<br> на любой вкус
+                    li(style="background-image: url('img/icons/adv-2.png')").index__advantages-item
+                        p.index__advantages-title.
+                            Быстрая доставка
+                        p.index__advantages-text.
+                            Доставка в любую<br> точку города
+                    li(style="background-image: url('img/icons/adv-3.png')").index__advantages-item
+                        p.index__advantages-title.
+                            Обратная связь
+                        p.index__advantages-text.
+                            Индивидуальный подход<br> к клиентам
+        div.inner-sec.index__inner-sec-photo-gallery
+            div.container
+                p.fw-light.heading.heading_m.ta-center.
+                    Фруктовые подарки в жизни
+                div.collage
+                    div.collage__item.collage__item_high
+                        div.collage__block.collage__block_w50
+                            div.collage__photo.collage__photo_h2.collage__photo_w2
+                                div(style="background-image: url('img/collage-1.jpg')").collage__img
+                            div.collage__photo.collage__photo_h2.collage__photo_w2
+                                div(style="background-image: url('img/collage-2.jpg')").collage__img
+                            div.collage__photo.collage__photo_h2.collage__photo_w4
+                                div(style="background-image: url('img/collage-3.jpg')").collage__img
+                        div.collage__block.collage__block_w50
+                            div.collage__photo.collage__photo_h4.collage__photo_w4
+                                div(style="background-image: url('img/collage-4.jpg')").collage__img
+                    div.collage__item
+                        div.collage__block.collage__block_h50
+                            div.collage__photo.collage__photo_h4.collage__photo_w1
+                                div(style="background-image: url('img/collage-5.jpg')").collage__img
+                            div.collage__photo.collage__photo_h4.collage__photo_w2
+                                div(style="background-image: url('img/collage-6.jpg')").collage__img
+                            div.collage__photo.collage__photo_h4.collage__photo_w1
+                                div(style="background-image: url('img/collage-7.jpg')").collage__img
+        div.inner-sec.order
+            div.container
+                div.order__block
+                    p.heading.heading_l.fw-light.
+                        Хотите сделать заказ?
+                    p.text.text_s.fw-light.order__title.
+                        Мы поможем вам подобрать подходящую<br> фруктовую сладость
+                    a(href="tel:84986536605").header__phone.order__phone.title.title_m
+                        |8 498 653-66-05
+                    br
+                    a(href="" data-popup="js-call-me").btn-round.order__btn.js-popup.
+                        Перезвоните мне
+                    p.text.text_xs.fw-light.fs-italic.
+                        Звонок бесплатный
+

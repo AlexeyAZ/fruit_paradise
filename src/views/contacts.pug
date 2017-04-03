@@ -1,0 +1,32 @@
+extends templates/layout
+
+block vars
+	- var title = 'Фруторай - контакты'
+
+block content
+	section.sec.contacts
+		div.container
+			div.lines-container.delivery__title
+				p.title.title_m.title_light.ta-center.lines.
+					Контакты
+			p.ta-center.contacts__subtitle.
+				Мы производим фруктовые букеты в Анапе, Краснодаре и Новоросиийске.
+			ul.contacts__list
+				li.contacts__list-item
+					div(style="background-image:url('img/icons/adress.png')").contacts__list-img
+					p.contacts__list-title.
+						Адрес
+					a(href="https://www.google.ru/maps/place/%D1%83%D0%BB.+%D0%9A%D0%B0%D0%BB%D0%B8%D0%BD%D0%B8%D0%BD%D0%B0,+15,+%D0%90%D0%BD%D0%B0%D0%BF%D0%B0,+%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D0%BE%D0%B4%D0%B0%D1%80%D1%81%D0%BA%D0%B8%D0%B9+%D0%BA%D1%80%D0%B0%D0%B9,+353440/@44.892628,37.3006667,17z/data=!3m1!4b1!4m5!3m4!1s0x40ee0ba916a02225:0x33a5a094d597035e!8m2!3d44.892628!4d37.3028554" target="_blank").contacts__list-text.
+						Анапа, Ул Калинина, д15.
+				li.contacts__list-item
+					div(style="background-image:url('img/icons/iphone.png')").contacts__list-img
+					p.contacts__list-title.
+						Телефон
+					a(href="tel:84986536605").contacts__list-text.
+						8 498 653-66-05
+				li.contacts__list-item
+					div(style="background-image:url('img/icons/mail.png')").contacts__list-img
+					p.contacts__list-title.
+						Эл. почта
+					a(href="mailto:frutorai@mail.ru").contacts__list-text.
+						frutorai@mail.ru

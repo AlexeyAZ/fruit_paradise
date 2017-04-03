@@ -1,0 +1,18 @@
+div(data-popup="js-make-order").modal
+	div.modal__popup.modal__popup_medium.ta-center
+		div.modal__close
+		div.modal__row
+			div.modal__col.modal__col_border
+				img(src="img/p-gallery-1.jpg", alt="")
+				p.text.text_s.
+					Вкусняшка
+			div.modal__col.modal__col_content-center
+				p.modal__title.
+					Сделать заказ
+				form.modal__form
+					label.modal__label
+						input(type="text" name="name" placeholder="Ваше имя").input.input_styled.modal__input
+					label.modal__label
+						input(type="text" name="phone" placeholder="Ваш телефон").input.input_styled.modal__input
+					button.btn-round.btn-round_s.
+						Заказать

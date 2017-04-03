@@ -1,0 +1,322 @@
+.header {
+	background-image: url("../img/header-img-left.png"), url("../img/header-img-right.png");
+	background-position: left top -12px, right top -18px;
+	background-repeat: no-repeat;
+	margin-bottom: 50px;
+	padding-top: 20px;
+
+	@include media(w1800) {
+		background-size: 200px, 200px;
+	}
+
+	@include media(w1600) {
+		background-size: 150px, 150px;
+	}
+
+	@include media(w1366) {
+		background-position: left top -30px, right top -25px;
+	}
+
+	@include media(w600) {
+		background-image: none;
+		padding-top: 0;
+	}
+
+	&__info {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 30px;
+		padding-top: 20px;
+		position: relative;
+		width: 100%;
+
+		@include media(w1024) {
+			flex-wrap: wrap;
+			align-items: flex-start;
+		}
+
+		@include media(w768) {
+			flex-wrap: nowrap;
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+
+	&__logo-block {
+		transform: translate(-50%, 0);
+		position: absolute;
+		top: 4px;
+		left: 50%;
+
+		@include media(w1024) {
+			transform: translate(0, 0);
+			text-align: center;
+			margin-bottom: 15px;
+			position: relative;
+			top: auto;
+			left: auto;
+			width: 100%;
+			order: 1;
+		}
+
+		@include media(w600) {
+			text-align: left;
+		}
+	}
+
+	&__logo {
+		text-align: center;
+	}
+
+	&__menu-btn {
+		transition: $trans;
+		transform: translateY(-50%);
+		background-color: $main-red;
+		border-radius: 50%;
+		display: none;
+		position: fixed;
+		top: 54px;
+		right: 30px;
+		height: $header-menu-btn-size;
+		width: $header-menu-btn-size;
+		z-index: 11;
+
+		&:hover {
+			
+		}
+
+		&_active {
+			background-color: white;
+
+			.header__menu-icon {
+
+				&:before,
+				&:after {
+					background-color: $main-red;
+				}
+
+				&:before {
+					transform: rotate(45deg);
+					top: 0;
+				}
+
+				&:after {
+					transform: rotate(-45deg);
+					bottom: 0;
+				}
+			}
+		}
+
+		@include media(w600) {
+			display: block;
+		}
+	}
+
+	&__menu-icon {
+		transform: translate(-50%, -50%);
+		background-color: white;
+		border-radius: 2px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		height: 3px;
+		width: 22px;
+
+		&:before,
+		&:after {
+			transition: $trans;
+			content: "";
+			background-color: white;
+			border-radius: 2px;
+			position: absolute;
+			left: 0;
+			height: 100%;
+			width: 100%;
+		}
+
+		&:before {
+			top: -8px;
+		}
+
+		&:after {
+			bottom: -8px;
+		}
+	}
+
+	&__location-block {
+		position: relative;
+
+		@include media(w1024) {
+			order: 2;
+		}
+
+		@include media(w768) {
+			text-align: center;
+			margin-bottom: 15px;
+			width: 100%;
+
+			&:before {
+				content: "";
+				background-color: #f5f1ef;
+				position: absolute;
+				top: 0;
+				left: -30px;
+				right: -30px;
+				height: 100%;
+				z-index: -1;
+			}
+		}
+	}
+
+	&__location {
+		@include link(black,black);
+		background-image: url("../img/icons/map-marker.png");
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: left center;
+		padding-left: 24px;
+
+		@include media(w768) {
+			background-size: auto;
+			margin-bottom: 0;
+			padding-top: 6px;
+			padding-bottom: 6px;
+		}
+	}
+
+	&__phone-block {
+		text-align: right;
+		position: relative;
+
+		@include media(w1024) {
+			order: 3;
+		}
+
+		@include media(w768) {
+			text-align: center;
+		}
+	}
+
+	&__phone {
+		@include link($main-green,$main-green);
+		background-image: url("../img/icons/phone.png");
+		background-repeat: no-repeat;
+		background-position: left center;
+		display: block;
+		line-height: 1;
+		padding-left: 28px;
+	}
+
+	&__phone-subtitle {
+		@include link(black,black);
+		font-size: 13px;
+		font-style: italic;
+	}
+
+	&__nav {
+
+		@include media(w600) {
+			display: none;
+			background-color: $main-red;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			z-index: 10;
+		}
+	}
+
+	&__nav-name {
+		display: none;
+		color: rgba(0,0,0,0.8);
+		padding: 40px 20px;
+
+		@include media(w600) {
+			display: block;
+		}
+	}
+
+	&__nav-list {
+		background-image: url("../img/header-nav-bg.png");
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		border-radius: 34px;
+		text-align: center;
+
+		@include media(w600) {
+			background-image: none;
+		}
+	}
+
+	&__nav-item {
+		display: inline-block;
+		font-size: 15px;
+		line-height: 1;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		text-align: center;
+		padding: 20px 40px;
+		position: relative;
+
+		&:before {
+			content: "";
+			transform: translateY(-50%);
+			background-color: rgba(255,255,255,0.7);
+			position: absolute;
+			top: 50%;
+			right: 0;
+			height: 16px;
+			width: 1px;
+
+			@include media(w600) {
+				content: none;
+			}
+		}
+
+		&:first-child {
+			padding-left: 0;
+
+			@include media(w600) {
+				padding-left: 20px;
+			}
+		}
+		
+		&:last-child {
+			padding-right: 0;
+
+			&:before {
+				content: none;
+			}
+
+			@include media(w600) {
+				padding-right: 20px;
+			}
+		}
+
+		@include media(w1024) {
+			padding: 15px 20px;
+		}
+
+		@include media(w768) {
+			font-size: 14px;
+			padding: 15px;
+		}
+
+		@include media(w600) {
+			border-top: 1px solid rgba(255,255,255,0.4);
+			display: block;
+			text-align: left;
+		}
+	}
+
+	&__nav-link {
+		@include link(white,white);
+
+		@include media(w600) {
+			height: 100%;
+			width: 100%;
+		}
+	}
+}

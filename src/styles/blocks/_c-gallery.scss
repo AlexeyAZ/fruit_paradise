@@ -1,0 +1,141 @@
+.c-gallery {
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&__list-item {
+		cursor: pointer;
+		text-align: center;
+		margin: 0 1% 20px;
+		position: relative;
+		height: 392px;
+		width: 23%;
+
+		@include media(w1024) {
+			margin-left: 0.5%;
+			margin-right: 0.5%;
+			height: 380px;
+			width: 32%;
+		}
+
+		@include media(w768) {
+			margin-left: 1%;
+			margin-right: 1%;
+			width: 48%;
+		}
+
+		@include media(w500) {
+			margin-left: 0;
+			margin-right: 0;
+			//height: 380px;
+			width: 100%;
+		}
+
+		&:hover {
+
+			.c-gallery__list-item-container {
+				border-color: $main-green;
+				box-shadow: 0 0 10px rgba(0,0,0,0.2);
+				top: -20px;
+				bottom: -20px;
+				left: -20px;
+				right: -20px;
+				z-index: 2;
+			}
+
+			.c-gallery__list-buttons {
+				opacity: 1;
+			}
+		}
+	}
+
+	&__list-item-container {
+		transition: $trans;
+		background-color: white;
+		border: 1px solid $border;
+		padding: 0 10px 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+
+	&__list-img-container {
+		padding: 10px 0;
+		height: 65%;
+		width: 100%;
+
+		@include media(w768) {
+			height: 62%;
+		}
+
+		&:before {
+			content: "";
+			display: inline-block;
+			visibility: hidden;
+			height: 100%;
+			width: 0;
+		}
+	}
+
+	&__list-img {
+		display: inline-block;
+		vertical-align: bottom;
+		max-width: 100%;
+		max-height: 100%;
+	}
+
+	&__list-title {
+		font-size: 18px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		padding-bottom: 20px;
+		position: relative;
+		width: 100%;
+		white-space: nowrap;
+
+		&:after {
+			transform: translateX(-50%);
+			content: "";
+			background-color: $border;
+			position: absolute;
+			left: 50%;
+			bottom: 0;
+			height: 1px;
+			width: 40px;
+		}
+	}
+
+	&__list-price {
+		color: $main-green;
+		font-size: 22px;
+	}
+
+	&__list-buttons {
+		transition: $trans;
+		display: flex;
+		justify-content: space-between;
+		opacity: 0;
+		white-space: nowrap;
+		width: 100%;
+
+		@include media(w500) {
+			justify-content: center;
+		}
+	}
+
+	&__list-btn {
+		transition: $trans;
+		overflow: hidden;
+		text-align: center;
+		margin-right: 5px;
+		flex-shrink: 1;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}

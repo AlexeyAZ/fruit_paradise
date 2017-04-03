@@ -1,0 +1,136 @@
+extends templates/layout
+
+block vars
+	- var title = 'Фруторай - каталог'
+
+block content
+	section.sec.catalog
+		div.container
+			div.catalog__head
+				ul.catalog__head-list
+					li.catalog__head-list-item.catalog__head-list-item_active
+						a(href="").catalog__head-list-link.
+							Фруктовые букеты
+					li.catalog__head-list-item
+						a(href="").catalog__head-list-link.
+							Фруктовые корзины
+					li.catalog__head-list-item
+						a(href="").catalog__head-list-link.
+							Оригинальные композициии
+					li.catalog__head-list-item
+						a(href="").catalog__head-list-link.
+							Фрукты в шоколаде
+					li.catalog__head-list-item
+						a(href="").catalog__head-list-link.
+							Карвинг арбуза
+					li.catalog__head-list-item
+						a(href="").catalog__head-list-link.
+							Канапе и нарезки
+			p.catalog__title.title.title_m.title_light.color-red.ta-center.
+				Фруктовые букеты
+			p.text.text_xs.ta-center.catalog__text.
+				Фруктовые букеты на заказ в Анапе, Краснодаре и Новоросийске. Букет должен быть не только красивым, но и вкусным.<br> Доставьте радость своим близким и любимым.
+			div.c-gallery
+				ul.c-gallery__list
+					li.c-gallery__list-item
+						div.c-gallery__list-item-container
+							div.c-gallery__list-img-container
+								img(src="img/c-gallery-1.jpg", alt="").c-gallery__list-img
+							p.c-gallery__list-title.
+								Ассорти
+							p.c-gallery__list-price.
+								990 руб
+							div.c-gallery__list-buttons
+								a(href="").btn-round.btn-round_inverse.btn-round_s.c-gallery__list-btn.
+									Подробнее
+								a(href="" data-popup="js-make-order").btn-round.btn-round_s.c-gallery__list-btn.js-popup.
+									Заказать
+					li.c-gallery__list-item
+						div.c-gallery__list-item-container
+							div.c-gallery__list-img-container
+								img(src="img/c-gallery-2.jpg", alt="").c-gallery__list-img
+							p.c-gallery__list-title.
+								Вкусняшка
+							p.c-gallery__list-price.
+								1 496 руб
+							div.c-gallery__list-buttons
+								a(href="").btn-round.btn-round_inverse.btn-round_s.c-gallery__list-btn.
+									Подробнее
+								a(href="" data-popup="js-make-order").btn-round.btn-round_s.c-gallery__list-btn.js-popup.
+									Заказать
+					li.c-gallery__list-item
+						div.c-gallery__list-item-container
+							div.c-gallery__list-img-container
+								img(src="img/c-gallery-3.jpg", alt="").c-gallery__list-img
+							p.c-gallery__list-title.
+								Юбилейный
+							p.c-gallery__list-price.
+								600 руб
+							div.c-gallery__list-buttons
+								a(href="").btn-round.btn-round_inverse.btn-round_s.c-gallery__list-btn.
+									Подробнее
+								a(href="" data-popup="js-make-order").btn-round.btn-round_s.c-gallery__list-btn.js-popup.
+									Заказать
+					li.c-gallery__list-item
+						div.c-gallery__list-item-container
+							div.c-gallery__list-img-container
+								img(src="img/c-gallery-4.jpg", alt="").c-gallery__list-img
+							p.c-gallery__list-title.
+								Сказочные ромашки
+							p.c-gallery__list-price.
+								2 190 руб
+							div.c-gallery__list-buttons
+								a(href="").btn-round.btn-round_inverse.btn-round_s.c-gallery__list-btn.
+									Подробнее
+								a(href="" data-popup="js-make-order").btn-round.btn-round_s.c-gallery__list-btn.js-popup.
+									Заказать
+					li.c-gallery__list-item
+						div.c-gallery__list-item-container
+							div.c-gallery__list-img-container
+								img(src="img/c-gallery-5.jpg", alt="").c-gallery__list-img
+							p.c-gallery__list-title.
+								Ассорти
+							p.c-gallery__list-price.
+								2 590 руб
+							div.c-gallery__list-buttons
+								a(href="").btn-round.btn-round_inverse.btn-round_s.c-gallery__list-btn.
+									Подробнее
+								a(href="" data-popup="js-make-order").btn-round.btn-round_s.c-gallery__list-btn.js-popup.
+									Заказать
+			div.catalog__note
+				p.text.text_s.fw-bold.
+					Букет из фруктов - лучший подарок 2016 года
+				p.
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dapibus sem ante, ac ultrices augue suscipit in. Mauris fringilla eu nunc vitae dictum. Sed sed auctor sapien. Nullam semper commodo rutrum. Sed placerat elit et leo lacinia, in varius nulla elementum. Suspendisse sed suscipit augue, in feugiat dolor. Morbi malesuada quam in nunc scelerisque, eu faucibus leo mattis. Nulla facilisi.
+				ul.catalog__note-list
+					li.catalog__note-list-item.
+						1
+					li.catalog__note-list-item.
+						2
+					li.catalog__note-list-item.
+						3
+					li.catalog__note-list-item.
+						4
+					li.catalog__note-list-item.
+						5
+				p.
+					Aliquam aliquam rhoncus urna iaculis maximus. Fusce in nisi consequat, semper augue elementum, ornare magna. Integer leo eros, tristique nec efficitur eget, egestas sed lectus. Nullam ac congue sapien. Suspendisse vehicula eu nulla id hendrerit. Sed luctus urna at purus pellentesque dignissim. Nam nec luctus ex. Pellentesque ut ultrices dolor. Praesent tristique massa felis, ut imperdiet enim vestibulum in. Aenean ut faucibus ligula. Vestibulum nec justo vestibulum tortor suscipit malesuada at id felis. Nulla luctus, risus vitae volutpat tristique, nisi nunc iaculis sapien, non ornare sapien justo in metus. Ut quis tincidunt nisl.
+				img(src="img/catalog-note.jpg", alt="").catalog__note-img
+				p.text.text_s.fw-bold.
+					Фруктовый букет недорого
+				p.
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dapibus sem ante, ac ultrices augue suscipit in. Mauris fringilla eu nunc vitae dictum. Sed sed auctor sapien. Nullam semper commodo rutrum. Sed placerat elit et leo lacinia, in varius nulla elementum. Suspendisse sed suscipit augue, in feugiat dolor. Morbi malesuada quam in nunc scelerisque, eu faucibus leo mattis. Nulla facilisi.
+		div.inner-sec.order
+			div.container
+				div.order__block
+					p.heading.heading_l.fw-light.
+						Остались вопросы?
+					p.text.text_s.fw-light.order__title.
+						Поможем вам выбрать подходящий<br> фруктовый подарок
+					a(href="tel:84986536605").header__phone.order__phone.title.title_m
+						|8 498 653-66-05
+					br
+					a(href="" data-popup="js-call-me").btn-round.order__btn.js-popup.
+						Перезвоните мне
+					p.text.text_xs.fw-light.fs-italic.
+						Звонок бесплатный

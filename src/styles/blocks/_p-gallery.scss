@@ -1,0 +1,341 @@
+$p-gallery-item-height: 490px;
+$p-gallery-img-container-height: 350px;
+
+.p-gallery {
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+
+	&__item {
+		transition: $trans;
+		position: relative;
+		height: $p-gallery-item-height;
+		width: calc(100% / 3);
+
+		@include media(w1024) {
+			height: $p-gallery-item-height - 120px;
+		}
+
+		@include media(w768) {
+			height: $p-gallery-item-height - 160px;
+			width: calc(100% / 2);
+		}
+
+		@include media(w500) {
+			height: $p-gallery-item-height;
+			width: 100%;
+		}
+
+		&:before {
+			transition: $trans;
+			content: "";
+			background-color: transparent;
+			position: absolute;
+			right: 0;
+			top: 0;
+			height: 100%;
+			width: 1px;
+		}
+
+		&:after {
+			transition: $trans;
+			content: "";
+			background-color: transparent;
+			position: absolute;
+			left: 0;
+			top: 0;
+			height: 1px;
+			width: 100%;
+		}
+
+		&:nth-child(1) {
+			border-top: 1px solid $border;
+			border-left: 1px solid $border;
+			border-bottom: 1px solid $border;
+
+			@include media(w500) {
+				border-right: 1px solid $border;
+			}
+
+			&:hover {
+
+				&:before {
+					background-color: $main-red;
+
+					@include media(w500) {
+						background-color: transparent;
+					}
+				}
+			}
+		}
+
+		&:nth-child(2) {
+			border-top: 1px solid $border;
+			border-left: 1px solid $border;
+			border-bottom: 1px solid $border;
+
+			@include media(w768) {
+				border-right: 1px solid $border;
+			}
+
+			@include media(w500) {
+				border-top: none;
+			}
+
+			&:hover {
+				
+				&:before {
+					background-color: $main-red;
+
+					@include media(w768) {
+						background-color: transparent;
+					}
+				}
+			}
+		}
+
+		&:nth-child(3) {
+			border: 1px solid $border;
+
+			@include media(w768) {
+				border-top: none;
+				border-right: none;
+				border-left: 1px solid $border;
+				border-bottom: 1px solid $border;
+			}
+
+			@include media(w500) {
+				border-right: 1px solid $border;
+			}
+
+			&:hover {
+				
+				&:before {
+
+					@include media(w768) {
+						background-color: $main-red;
+					}
+
+					@include media(w500) {
+						background-color: transparent;
+					}
+				}
+
+				&:after {
+
+					@include media(w768) {
+						background-color: $main-red;
+					}
+				}
+			}
+		}
+
+		&:nth-child(3n+4) {
+			border-left: 1px solid $border;
+			border-bottom: 1px solid $border;
+
+			@include media(w768) {
+				border: none;
+			}
+
+			&:hover {
+
+				&:before {
+					background-color: $main-red;
+
+					@include media(w768) {
+						background-color: transparent;
+					}
+				}
+
+				&:after {
+					background-color: $main-red;
+				}
+			}
+		}
+
+		&:nth-child(3n+5) {
+			border-left: 1px solid $border;
+			border-bottom: 1px solid $border;
+
+			@include media(w768) {
+				border: none;
+			}
+
+			&:hover {
+
+				&:before {
+					background-color: $main-red;
+
+					@include media(w768) {
+						background-color: transparent;
+					}
+				}
+
+				&:after {
+					background-color: $main-red;
+
+					@include media(w768) {
+						background-color: transparent;
+					}
+				}
+			}
+		}
+
+		&:nth-child(3n+6) {
+			border-left: 1px solid $border;
+			border-right: 1px solid $border;
+			border-bottom: 1px solid $border;
+
+			@include media(w768) {
+				border: none;
+			}
+
+			&:hover {
+
+				&:after {
+					background-color: $main-red;
+
+					@include media(w768) {
+						background-color: transparent;
+					}
+				}
+			}
+		}
+
+		&:nth-child(2n+4) {
+
+			@include media(w768) {
+				border-left: 1px solid $border;
+				border-right: 1px solid $border;
+				border-bottom: 1px solid $border;
+			}
+
+			&:hover {
+
+				&:after {
+					background-color: $main-red;
+				}
+			}
+		}
+
+		&:nth-child(2n+5) {
+
+			@include media(w768) {
+				border-left: 1px solid $border;
+				border-bottom: 1px solid $border;
+			}
+
+			@include media(w500) {
+				border-right: 1px solid $border;
+			}
+
+			&:hover {
+
+				&:before {
+					background-color: $main-red;
+
+					@include media(w500) {
+						background-color: transparent;
+					}
+				}
+
+				&:after {
+					background-color: $main-red;
+				}
+			}
+		}
+
+		&:hover {
+			border-color: $main-red;
+
+			.p-gallery__link {
+				color: $main-red;
+			}
+		}
+	}
+
+	&__link {
+		transition: $trans;
+		color: black;
+		text-align: center;
+		display: block;
+		padding-bottom: 60px;
+		position: relative;
+		height: 100%;
+		width: 100%;
+	}
+
+	&__img-container {
+		display: block;
+		padding-bottom: 20px;
+		height: $p-gallery-img-container-height;
+
+		@include media(w1024) {
+			height: $p-gallery-img-container-height - 120px;
+		}
+
+		@include media(w500) {
+			height: $p-gallery-img-container-height;
+		}
+
+		&:before {
+			content: "";
+			display: inline-block;
+			height: 100%;
+			vertical-align: bottom;
+			width: 0;
+		}
+	}
+
+	&__img {
+		display: inline-block;
+		margin: 0 auto;
+		vertical-align: bottom;;
+		max-height: $p-gallery-img-container-height - 30px;
+		max-width: 90%;
+
+		@include media(w1024) {
+			max-height: $p-gallery-img-container-height - 150px;
+			max-width: 70%;
+		}
+
+		@include media(w768) {
+			max-height: $p-gallery-img-container-height - 180px;
+		}
+
+		@include media(w500) {
+			max-height: $p-gallery-img-container-height - 30px;
+			max-width: 90%;
+		}
+	}
+
+	&__text {
+		font-size: 32px;
+		font-weight: 300;
+		line-height: 1.2;
+		padding: 0 20px;
+		position: absolute;
+		top: $p-gallery-img-container-height;
+		left: 0;
+		width: 100%;
+
+		@include media(w1024) {
+			font-size: 28px;
+			top: $p-gallery-img-container-height - 90px;
+		}
+
+		@include media(w768) {
+			font-size: 24px;
+			top: $p-gallery-img-container-height - 100px;
+		}
+
+		@include media(w500) {
+			font-size: 32px;
+			top: $p-gallery-img-container-height;
+		}
+	}
+}

@@ -1,0 +1,27 @@
+.pr-gallery {
+
+	&__main-img-container {
+		border: 1px solid $border;
+		text-align: center;
+		margin-bottom: 20px;
+		padding: 50px 0;
+	}
+
+	&__main-img {
+		display: inline-block;
+		max-width: 80%;
+	}
+
+	&__thumbnails-list {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__thumbnails-item {
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		display: block;
+		width: 32%;
+	}
+}

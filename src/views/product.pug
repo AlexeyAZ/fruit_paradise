@@ -1,0 +1,58 @@
+extends templates/layout
+
+block vars
+	- var title = 'Фруторай - страница товара'
+
+block content
+	section.sec.product
+		div.container
+			div.product__nav
+				a(href="").product__nav-link.
+					Главная
+				a(href="").product__nav-link.
+					Фруктовые букеты
+				a(href="").product__nav-link.
+					Вкусняшка
+			div.product__row
+				div.product__col.product__col_left
+					div.pr-gallery
+						div.pr-gallery__main-img-container
+							img(src="img/p-gallery-1.jpg", alt="").pr-gallery__main-img
+						ul.pr-gallery__thumbnails-list
+							li(style="background-image:url('img/pr-gallery-img1.jpg')").pr-gallery__thumbnails-item
+							li(style="background-image:url('img/pr-gallery-img2.jpg')").pr-gallery__thumbnails-item
+							li(style="background-image:url('img/pr-gallery-img3.jpg')").pr-gallery__thumbnails-item
+				div.product__col.product__col_right
+					div.pr-info
+						div.pr-info__head
+							p.pr-info__title.title.title_m.title_light.
+								Вкусняшка
+							div.product__gallery-nav
+								a(href="").product__nav-arrow.product__nav-arrow_left
+									div.arrow.arrow_s.arrow_left
+								a(href="").product__nav-arrow.product__nav-arrow_right
+									div.arrow.arrow_s.arrow_right
+						div.pr-info__properties
+							div.pr-info__property
+								div.pr-info__property-name.
+									Состав:
+								div.pr-info__property-description
+									p.
+										апельсин, ананас, грейпфрут, клубника, шоколад, виноград, яблоко, дыня канталупа, кондитерская посыпка
+									p.
+										По Вашему желанию, мы можем заменить фрукты в этом букете на Ваш вкус.
+							div.pr-info__property
+								div.pr-info__property-name.
+									Размер:
+								div.pr-info__property-description
+									label.pr-info__property-label
+										input(type="radio" name="size" checked)
+										|Мини, 1 кг 1 496 руб
+									label.pr-info__property-label
+										input(type="radio" name="size")
+										|Стандарт, 2.5 кг 2 590 руб
+						div.pr-info__foot
+							div.pr-info__foot-price.
+								1 496 <span>руб</span>
+							a(href="" data-popup="js-call-me").btn-round.order__btn.
+								Заказать

@@ -1,0 +1,24 @@
+.lines-container {
+	text-align: center;
+	position: relative;
+
+	&:before {
+		content: "";
+		background-color: $border;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		height: 1px;
+		width: 100%;
+		z-index: 1;
+	}
+
+	p {
+		background-color: white;
+		display: inline-block;
+		margin-bottom: 0;
+		padding: 0 40px;
+		position: relative;
+		z-index: 2;
+	}
+}

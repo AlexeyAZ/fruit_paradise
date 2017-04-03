@@ -1,0 +1,68 @@
+.text {
+	margin-bottom: 0.5em;
+
+	&_xs {
+		font-size: 15px;
+	}
+
+	&_s {
+		font-size: 18px;
+	}
+
+	&_m {
+		font-size: 20px;
+	}
+
+	&_l {
+		font-size: 22px;
+	}
+
+	&_xl {
+		font-size: 30px;
+	}
+
+	&_xxl {
+		font-size: 30px;
+	}
+}
+
+p {
+	margin-bottom: 0.5em;
+}
+
+.title {
+	font-weight: bold;
+	margin-bottom: 0.5em;
+	
+	&_m {
+		font-size: 32px;
+	}
+
+	&_l {
+		font-size: 36px;
+	}
+
+	&_light {
+		font-weight: 300;
+	}
+}
+
+.heading {
+	margin-bottom: 0.5em;
+
+	&_m {
+		font-size: 42px;
+	}
+
+	&_l {
+		font-size: 46px;
+
+		@include media(w1024) {
+			font-size: 36px;
+		}
+
+		@include media(w768) {
+			font-size: 26px;
+		}
+	}
+}

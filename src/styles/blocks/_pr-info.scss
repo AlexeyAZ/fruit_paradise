@@ -1,0 +1,68 @@
+$pr-info-property-name-width: 70px;
+
+.pr-info {
+
+	&__head {
+		position: relative;
+	}
+
+	&__title {
+		padding-bottom: 16px;
+		position: relative;
+
+		&:before {
+			content: "";
+			background-color: $border;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			height: 1px;
+			width: 40px;
+		}
+	}
+
+	&__properties {
+		margin-bottom: 30px;
+	}
+
+	&__property {
+		display: flex;
+		width: 100%;
+	}
+
+	&__property-name {
+		flex-shrink: 0;
+		font-weight: 500;
+		width: $pr-info-property-name-width;
+	}
+
+	&__property-description {
+		flex-shrink: 1;
+		padding-left: 20px;
+		width: calc(100% - #{$pr-info-property-name-width});
+
+		p {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__property-label {
+		display: block;
+	}
+
+	&__foot {
+		display: flex;
+	}
+
+	&__foot-price {
+		color: $main-green;
+		font-size: 32px;
+		margin-right: 20px;
+
+		span {
+			font-size: 0.7em;
+			text-transform: uppercase;
+		}
+	}
+}
+	

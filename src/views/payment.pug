@@ -1,0 +1,24 @@
+extends templates/layout
+
+block vars
+	- var title = 'Фруторай - оплата'
+
+block content
+	section.sec.delivery
+		div.container
+			div.lines-container.delivery__title
+				p.title.title_m.title_light.ta-center.lines.
+					Оплата
+			div.description
+				div.description__img-container
+					img(src="img/payment-img.png", alt="").description__img
+				div.description__list-container
+					p.description__list-title.text.text_l.
+						Возможные способы оплаты
+					ul.description__list
+						li.description__list-item.
+							Наличными курьеру при получении заказа
+						li.description__list-item.
+							Банковской карточкой: Сбербанк 1234 5678 9103 1234
+						li.description__list-item.
+							Электронными деньгами: Яндекс-кошелек 

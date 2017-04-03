@@ -1,0 +1,17 @@
+.arrow {
+
+	&_s {
+		border-left: 2px solid #8e8e8e;
+		border-bottom: 2px solid #8e8e8e;
+		height: 8px;
+		width: 8px;
+	}
+
+	&_left {
+		transform: rotate(45deg);
+	}
+
+	&_right {
+		transform: rotate(-135deg);
+	}
+}
