@@ -4,6 +4,10 @@ $product-col-left-width: 424px;
 
 	&__nav {
 		margin-bottom: 20px;
+
+		@include media(w1024) {
+			margin-bottom: 30px;
+		}
 	}
 
 	&__nav-link {
@@ -51,6 +55,11 @@ $product-col-left-width: 424px;
 		display: flex;
 		margin-bottom: 40px;
 		width: 100%;
+
+		@include media(w1024) {
+			flex-direction: column;
+			align-items: center;
+		}
 	}
 
 	&__col {
@@ -58,13 +67,30 @@ $product-col-left-width: 424px;
 		&_left {
 			flex-shrink: 0;
 			width: $product-col-left-width;
+
+			@include media(w1024) {
+				margin-bottom: 30px;
+			}
+
+			@include media(w500) {
+				width: 100%;
+			}
 		}
 
 		&_right {
 			flex-shrink: 1;
 			padding-left: 60px;
 			width: calc(100% - #{$product-col-left-width});
+
+			@include media(w1024) {
+				padding-left: 0;
+				width: 100%;
+			}
 		}
+	}
+
+	&__info {
+		margin-bottom: 20px;
 	}
 
 	&__gallery-nav {
@@ -87,6 +113,62 @@ $product-col-left-width: 424px;
 
 		&:hover {
 			border-color: $main-red;
+		}
+	}
+
+	&__reviews {
+		border-top: 1px solid $border;
+		padding-top: 40px;
+		font-weight: 500;
+	}
+
+	&__reviews-head {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 10px;
+	}
+
+	&__reviews-title {
+		margin-bottom: 0;
+	}
+
+	&__reviews-refresh {
+		background-image: url("../img/icons/refresh.png");
+		background-position: left center;
+		background-repeat: no-repeat;
+		cursor: pointer;
+		color: rgba(0,0,0,0.5);
+		font-weight: 500;
+		min-height: 16px;
+		padding-left: 25px;
+		white-space: nowrap;
+	}
+
+	&__reviews-name {
+		font-size: 14px;
+		font-weight: bold;
+		margin-bottom: 5px;
+	}
+
+	&__reviews-text {
+		font-size: 15px;
+		color: rgba(0,0,0,0.75);
+	}
+
+	&__slider {
+		margin-bottom: 120px;
+
+		@include media(w1280) {
+			margin-bottom: 100px;
+		}
+
+		@include media(w1024) {
+			margin-bottom: 80px;
+		}
+
+		@include media(w768) {
+			margin-bottom: 60px;
 		}
 	}
 }

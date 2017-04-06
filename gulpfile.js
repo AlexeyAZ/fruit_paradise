@@ -9,9 +9,11 @@ var properties = {
 var plugins = {
     js: [
         'bower_components/jquery/dist/jquery.min.js',
+        'bower_components/slick-carousel/slick/slick.min.js',
     ],
     css: [
         'bower_components/reset-css/reset.css',
+        'bower_components/slick-carousel/slick/slick.css',
     ]
 }
 

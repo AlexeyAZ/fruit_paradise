@@ -4,6 +4,32 @@ $(function() {
 	var headerNav = $(".header__nav");
 	var headerMenuBtn = $(".header__menu-btn");
 
+	$(".js-s-gallery").slick({
+		slidesToShow: 4,
+		prevArrow: ".js-s-gallery-arrow-left",
+		nextArrow: ".js-s-gallery-arrow-right",
+		responsive: [
+			{
+				breakpoint: 1024,
+				settings: {
+					slidesToShow: 3
+				}
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 2
+				}
+			},
+			{
+				breakpoint: 550,
+				settings: {
+					slidesToShow: 1
+				}
+			},
+		]
+	});
+
 	// pr-gallery thumbnails height
 	function setPrGalleryThumbnailsHeight() {
 
@@ -37,6 +63,7 @@ $(function() {
 
 		$("[data-popup=" + popup + "]").fadeIn();
 		$("html").addClass("modal-open");
+		setPrGalleryThumbnailsHeight();
 	});
 
 	body.on("click", function(e) {

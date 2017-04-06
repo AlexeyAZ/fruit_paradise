@@ -47,7 +47,9 @@ $pr-info-property-name-width: 70px;
 	}
 
 	&__property-label {
+		cursor: pointer;
 		display: block;
+		margin-bottom: 5px;
 	}
 
 	&__foot {

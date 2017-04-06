@@ -32,6 +32,10 @@
         @media only screen and (max-width: 600px) { @content; }
     }
 
+    @else if $media == w550 {
+        @media only screen and (max-width: 550px) { @content; }
+    }
+
     @else if $media == w500 {
         @media only screen and (max-width: 500px) { @content; }
     }
